@@ -10,10 +10,8 @@ class Post extends Model
     use HasFactory;
 
     // Define the fillable properties (only columns in the posts table)
-    protected $fillable = [
-        'title',
-        'body',
-    ];
+    protected $fillable = ['title', 'body', 'category_id', 'photo'];
+
 
     public function category()
 {

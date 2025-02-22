@@ -7,6 +7,12 @@
 <body class="bg-light">
     <div class="container my-5">
         <h2>{{ $post->title }}</h2>
+        
+        <!-- Display the photo if it exists -->
+        @if($post->photo)
+            <img src="{{ asset('storage/' . $post->photo) }}" class="img-fluid mb-3" alt="{{ $post->title }}">
+        @endif
+        
         <p>{{ $post->body }}</p>
         <a href="{{ route('posts.index') }}" class="btn btn-primary">Back to Posts</a>
     </div>
